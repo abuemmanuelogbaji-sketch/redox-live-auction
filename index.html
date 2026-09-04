@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redox Live Auction</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #111827;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .auctions {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .auctions h2 {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .coin {
+            height: 150px;
+            background: #e5e7eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Redox Live Auction</h1>
+    <p>Bid. Win. Own something special.</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#auctions">Auctions</a>
+    <a href="#">How It Works</a>
+    <a href="#">Sign In</a>
+</nav>
+
+<section class="hero">
+    <h2>Welcome to Redox Live Auction</h2>
+    <p>Discover unique items and participate in live auctions.</p>
+    <a class="button" href="#auctions">View Auctions</a>
+</section>
+
+<section class="auctions" id="auctions">
+    <h2>Featured Auctions</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="coin">🪙</div>
+            <h3>Featured Coin</h3>
+            <p>Live auction item</p>
+            <p class="price">Starting Bid: ₦1,000</p>
+            <a class="button" href="#">View Auction</a>
+        </div>
+
+        <div class="card">
+            <div class="coin">💰</div>
+            <h3>Premium Coin</h3>
+            <p>Live auction item</p>
+            <p class="price">Starting Bid: ₦2,500</p>
+            <a class="button" href="#">View Auction</a>
+        </div>
+
+        <div class="card">
+            <div class="coin">🪙</div>
+            <h3>Rare Coin</h3>
+            <p>Live auction item</p>
+            <p class="price">Starting Bid: ₦5,000</p>
+            <a class="button" href="#">View Auction</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Redox Live Auction. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
