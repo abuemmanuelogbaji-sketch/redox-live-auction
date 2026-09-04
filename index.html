@@ -34,6 +34,71 @@
             font-size: 25px;
             font-weight: bold;
         }
+        .theme-toggle {
+    border: none;
+    background: #ffffff;
+    color: #111827;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+}
+        body.dark-mode {
+    background: #0b1120;
+    color: #f3f4f6;
+}
+
+body.dark-mode nav {
+    background: #111827;
+}
+
+body.dark-mode nav a {
+    color: #f3f4f6;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f172a, #111827);
+}
+
+body.dark-mode .hero p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .section-title p {
+    color: #94a3b8;
+}
+
+body.dark-mode .card {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode .card p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .price {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .coin {
+    background: #1f2937;
+}
+
+body.dark-mode .theme-toggle {
+    background: #f3f4f6;
+    color: #111827;
+}
 
         .tagline {
             font-size: 14px;
@@ -206,8 +271,15 @@
 
 <header>
     <div>
-        <div class="logo">🔨 Redox Live Auction</div>
-        <div class="tagline">Bid. Win. Own something special.</div>
+        <div>
+    <div class="logo">🔨 Redox Live Auction</div>
+    <div class="tagline">Bid. Win. Own something special.</div>
+</div>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle day and night mode">
+    🌙
+</button>
+        
     </div>
 </header>
 
@@ -301,6 +373,34 @@
     startCountdown("timer1", 7200);
     startCountdown("timer2", 14400);
     startCountdown("timer3", 28800);
+</script>
+    <script>
+    const themeToggle = document.getElementById("themeToggle");
+
+    function setTheme(theme) {
+        if (theme === "dark") {
+            document.body.classList.add("dark-mode");
+            themeToggle.textContent = "☀️";
+            localStorage.setItem("redoxTheme", "dark");
+        } else {
+            document.body.classList.remove("dark-mode");
+            themeToggle.textContent = "🌙";
+            localStorage.setItem("redoxTheme", "light");
+        }
+    }
+
+    themeToggle.addEventListener("click", function () {
+        const isDark = document.body.classList.contains("dark-mode");
+        setTheme(isDark ? "light" : "dark");
+    });
+
+    const savedTheme = localStorage.getItem("redoxTheme");
+
+    if (savedTheme === "dark") {
+        setTheme("dark");
+    } else {
+        setTheme("light");
+    }
 </script>
 </body>
 </html>
