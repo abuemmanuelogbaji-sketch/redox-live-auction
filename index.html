@@ -61,7 +61,32 @@
 body.dark-mode nav {
     background: #111827;
 }
+.bid-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
+.bid-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+body.dark-mode .bid-button {
+    background: #3b82f6;
+}
+
+body.dark-mode .bid-button:hover {
+    background: #60a5fa;
+}
 body.dark-mode nav a {
     color: #f3f4f6;
 }
@@ -315,7 +340,10 @@ body.dark-mode .theme-toggle {
             <h3>Featured Coin</h3>
             <p>Live auction item</p>
             <p class="price">Starting Bid: ₦10,000–₦20,000
-            <p class="countdown" id="timer1">Loading...</p>    
+            <p class="countdown" id="timer1">Loading...</p>
+            <button class="bid-button" onclick="placeBid('Featured Coin')">
+    Place Bid
+</button>
             <a class="button" href="#">View Auction</a>
         </div>
 
