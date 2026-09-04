@@ -169,6 +169,12 @@
             color: #172033 !important;
             margin-top: 12px;
         }
+        .countdown {
+    font-size: 15px;
+    font-weight: bold;
+    color: #dc2626;
+    margin-top: 8px;
+}
 
         footer {
             background: #111827;
@@ -237,6 +243,7 @@
             <h3>Featured Coin</h3>
             <p>Live auction item</p>
             <p class="price">Starting Bid: ₦10,000–₦20,000
+            <p class="countdown" id="timer1">Loading...</p>    
             <a class="button" href="#">View Auction</a>
         </div>
 
@@ -246,6 +253,7 @@
             <h3>Premium Coin</h3>
             <p>Live auction item</p>
             <p class="price">Starting Bid: ₦20,000–₦60,000
+             <p class="countdown" id="timer2">Loading...</p>   
             <a class="button" href="#">View Auction</a>
         </div>
 
@@ -255,6 +263,7 @@
             <h3>Rare Coin</h3>
             <p>Live auction item</p>
             <p class="price">Starting Bid: ₦60,000–₦1,000,000
+            <p class="countdown" id="timer3">Loading...</p>    
             <a class="button" href="#">View Auction</a>
         </div>
 
@@ -264,6 +273,34 @@
 <footer>
     <p>© 2026 Redox Live Auction. All rights reserved.</p>
 </footer>
+<script>
+    function startCountdown(elementId, duration) {
+        let time = duration;
 
+        const timer = setInterval(function () {
+            const hours = Math.floor(time / 3600);
+            const minutes = Math.floor((time % 3600) / 60);
+            const seconds = time % 60;
+
+            document.getElementById(elementId).textContent =
+                "⏳ Ends in " +
+                String(hours).padStart(2, "0") + ":" +
+                String(minutes).padStart(2, "0") + ":" +
+                String(seconds).padStart(2, "0");
+
+            time--;
+
+            if (time < 0) {
+                clearInterval(timer);
+                document.getElementById(elementId).textContent =
+                    "🔴 Auction ended";
+            }
+        }, 1000);
+    }
+
+    startCountdown("timer1", 7200);
+    startCountdown("timer2", 14400);
+    startCountdown("timer3", 28800);
+</script>
 </body>
 </html>
