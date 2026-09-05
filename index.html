@@ -204,15 +204,20 @@ body.dark-mode .theme-toggle {
         }
 
         .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 25px;
-        }
+            .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+            
+            
+        
 
         .card {
         
             .card {
-    max-width: 320px;
+    max-width: 100%;
     padding: 18px;
     background: white;
     border-radius: 14px;
