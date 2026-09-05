@@ -20,8 +20,14 @@
         }
 
         header {
-            background: #111827;
-            color: white;
+            body.dark-mode .card {
+    background: #111827 !important;
+    color: #f3f4f6 !important;
+} body.dark-mode .card h3,
+  body.dark-mode .card p {
+  color: #f3f4f6;
+}
+            
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
