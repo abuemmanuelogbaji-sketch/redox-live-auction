@@ -156,23 +156,59 @@ body.dark-mode .theme-toggle {
         }
 
         .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #eef2ff, #ffffff);
-        }
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(rgba(5, 10, 25, 0.72), rgba(5, 10, 25, 0.88)),
+        url("images/Premium%20coin.jpg") center/cover no-repeat;
+    color: white;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 18px;
-        }
+.hero-content {
+    max-width: 850px;
+}
 
-        .hero p {
-            max-width: 650px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #5b6472;
-        }
+.hero-label {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    color: #d4af37;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.08;
+    margin: 0 0 22px;
+    font-weight: 800;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+.hero .button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 8px;
+    background: #d4af37;
+    color: #111827;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.hero .button:hover {
+    transform: translateY(-2px);
+}
 
         .button {
             display: inline-block;
@@ -331,16 +367,21 @@ body.dark-mode .theme-toggle {
 </nav>
 
 <section class="hero">
-    <h1>Welcome to Redox Live Auction</h1>
-    <p>
-        Discover unique items, follow live auctions,
-        and compete for something special from the comfort of your home.
-    </p>
+    <div class="hero-content">
+        <p class="hero-label">WELCOME TO REDOX LIVE AUCTION</p>
 
-    <a class="button" href="#auctions">Explore Auctions</a>
+        <h1>Discover. Bid.<br>Own Something Special.</h1>
+
+        <p class="hero-description">
+            Experience a premium live auction marketplace where
+            unique collectibles meet competitive bidding.
+        </p>
+
+        <a class="button" href="#auctions">Go to Auctions</a>
+    </div>
 </section>
 
-<section class="auctions" id="auctions">
+    <section class="auctions" id="auctions">
 
     <div class="section-title">
         <h2>Discover & Collect</h2>
