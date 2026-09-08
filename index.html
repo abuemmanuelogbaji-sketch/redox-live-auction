@@ -326,19 +326,31 @@ body.dark-mode .theme-toggle {
         }
 
         @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 34px;
-            }
+    .hero {
+        min-height: 500px;
+        padding: 50px 18px;
+    }
 
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.08;
+    }
 
-            header {
-                justify-content: center;
-                text-align: center;
-            }
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero .button {
+        padding: 13px 26px;
+        font-size: 15px;
+    }
+}
         }
     </style>
 </head>
